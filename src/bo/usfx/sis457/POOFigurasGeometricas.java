@@ -29,6 +29,9 @@ public class POOFigurasGeometricas {
         System.out.println("| 1) Calcular el area y perimetro de un Circulo    |");
         System.out.println("| 2) Calcular el area y perimetro de un Cuadrado   |");
         System.out.println("| 3) Calcular el area y perimetro de un Rectangulo |");
+        System.out.println("| 4) Calcular el area y perimetro de un Trapecio   |");
+        System.out.println("| 5) Calcular el area y perimetro de un Triangulo  |");
+        System.out.println("| 6) Calcular el area y perimetro de un Hexagono   |");
         System.out.println("| *) Salir                                         |");
         System.out.println("+==================================================+");
         entradaTeclado = new Scanner(System.in);
@@ -75,6 +78,55 @@ public class POOFigurasGeometricas {
                 Rectangulo rectangulo = new Rectangulo(base, altura);
                 System.out.println("El Area del Rectangulo es: " + rectangulo.getArea());
                 System.out.println("El Perimetro del Rectangulo es: " + rectangulo.getPerimetro());
+                break;
+                case 4 :
+                /* Se instancia un objeto de la Clase Rectangulo y a la vez se inicilaizan los valores
+                   de sus propiedades "Base" y "Altura" a través del método Constructor (Trapecio). */
+                limpiarConsola();
+                System.out.println("+==================================================+");
+                System.out.println("| SubPrograma: Trapecio                          |");
+                System.out.println("+==================================================+");
+                System.out.print("Introduzca el valor de la Base 1: ");
+                double base1 = entradaTeclado.nextDouble();
+                System.out.print("Introduzca el valor de la Base 2: ");
+                double base2 = entradaTeclado.nextDouble();
+                System.out.print("Introduzca el valor de la Altura: ");
+                double altura2 = entradaTeclado.nextDouble();
+                System.out.print("Introduzca el valor del Lado: ");
+                double lado = entradaTeclado.nextDouble();
+                Trapecio trapecio = new Trapecio(base1,base2, altura2, lado);
+                System.out.println("El Area del Trapecio es: " + trapecio.getArea());
+                System.out.println("El Perimetro del Trapecio es: " + trapecio.getPerimetro());
+                break;
+                case 5:
+                /* Se instancia un objeto de la Clase Rectangulo y a la vez se inicilaizan los valores
+                   de sus propiedades "Base" y "Altura" a través del método Constructor (Triangulo). */
+                limpiarConsola();
+                System.out.println("+==================================================+");
+                System.out.println("| SubPrograma: Triangulo                          |");
+                System.out.println("+==================================================+");
+                System.out.print("Introduzca el valor de la Base: ");
+                double base3 = entradaTeclado.nextDouble();
+                System.out.print("Introduzca el valor de la Altura: ");
+                double altura3 = entradaTeclado.nextDouble();
+                Triangulo triangulo = new Triangulo(base3, altura3);
+                System.out.println("El Area del Triangulo es: " + triangulo.getArea());
+                System.out.println("El Perimetro del Triangulo es: " + triangulo.getPerimetro());
+                break;
+                case 6:
+                /* Se instancia un objeto de la Clase Rectangulo y a la vez se inicilaizan los valores
+                   de sus propiedades "Base" y "Altura" a través del método Constructor (Hexagono). */
+                limpiarConsola();
+                System.out.println("+==================================================+");
+                System.out.println("| SubPrograma: Hexagono                          |");
+                System.out.println("+==================================================+");
+                System.out.print("Introduzca el valor del Lado: ");
+                double lado4 = entradaTeclado.nextDouble();
+                System.out.print("Introduzca el valor del a Apotema: ");
+                double apotema = entradaTeclado.nextDouble();
+                Hexagono hexagono = new Hexagono(lado4, apotema);
+                System.out.println("El Area del Hexagono es: " + hexagono.getArea());
+                System.out.println("El Perimetro del Hexagono es: " + hexagono.getPerimetro());
                 break;
             default:
                 System.out.println("Salio del programa");
